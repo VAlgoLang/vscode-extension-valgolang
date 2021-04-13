@@ -1,4 +1,4 @@
-# VS Code extension for VAlgoLang
+VS Code extension for VAlgoLang
 
 <!-- # valgolang README
 
