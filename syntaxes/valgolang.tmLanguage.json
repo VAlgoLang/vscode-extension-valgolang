@@ -1,0 +1,38 @@
+{
+	"scopeName": "source.val",
+	"patterns": [{ "include": "#letter" }, {"include": "#primitive"}, {"include": "#datastructure"}, {"include": "#datastructure_funcs"}, {"include": "#constants"}, { "include": "#paren-expression" }],
+	"repository": {
+	  "letter": {
+		"match": "\\b(let|fun|if|else|while|for|in|range|break|continue|return)\\b",
+		"name": "keyword.control.flow"
+	  },
+	  "primitive": {
+		"match": "\\b(number|boolean|char|string)\\b",
+		"name": "support.type.primitive"
+	  },
+	  "datastructure": {
+		"match": "(Stack|List|Array|Tree|Node)",
+		"name": "support.class.datastructure"
+	  },
+	  "datastructure_funcs": {
+		"match": "(push|pop|add|swap|get)",
+		"name": "support.function.datastructure_funcs"
+	  },
+	  "constants" : {
+		"match": "\\b(true|false)\\b",
+		"name": "constant.language.constant"
+	  },
+	  "paren-expression": {
+		"begin": "\\(",
+		"end": "\\)",
+		"beginCaptures": {
+		  "0": { "name": "punctuation.paren.open" }
+		},
+		"endCaptures": {
+		  "0": { "name": "punctuation.paren.close" }
+		},
+		"name": "expression.group",
+		"patterns": [{ "include": "#expression" }]
+	  }
+	}
+  }

@@ -1,0 +1,25 @@
+{
+    "name": "valgolang",
+    "displayName": "VAlgoLang",
+    "description": "Syntax highlighting for VAlgoLang",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "valgolang",
+            "aliases": ["VAlgoLang", "valgolang"],
+            "extensions": [".val"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "valgolang",
+            "scopeName": "source.val",
+            "path": "./syntaxes/valgolang.tmLanguage.json"
+        }]
+    }
+}
